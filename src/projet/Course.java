@@ -28,6 +28,9 @@ public class Course {
         this.km = km;
         this.ordre = ordre;
     }
+    public Course(int ordre){
+        this.ordre=ordre;
+    }
 
     public String getVille() {
         return ville;
@@ -67,6 +70,16 @@ public class Course {
 
     public void setParticipant(List<Pilote> participant) {
         this.participant = participant;
+    }
+    public String ajoutParticipant(Pilote p){
+         if (p == null) {
+            return "pilote nul";
+        }
+        if (participant.contains(p)) {
+            return "pilote deja enregistre";
+        }
+        participant.add(p);
+        return "ajout pilote effectue";
     }
 
     @Override

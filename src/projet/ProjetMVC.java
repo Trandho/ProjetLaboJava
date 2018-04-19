@@ -20,9 +20,11 @@ public class ProjetMVC {
         pv = new ProjetVue();
         pm = new ProjetModele();
         pc = new ProjetControleur(pm, pv);
+        pm.populate();
+        pc.choix();
     }
 
     public static void main(String[] args) {
-        ProjetMVC gmvc = new ProjetMVC();
+        ProjetMVC pmvc = new ProjetMVC();
     }
 }
